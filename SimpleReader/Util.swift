@@ -10,6 +10,8 @@ import Foundation
 
 class Util {
     static func gcd(_ u: Int, _ v: Int) -> Int {
+        assert(u >= 0)
+        assert(v >= 0)
         // simple cases (termination)
         if u == v {
             return u
@@ -44,6 +46,6 @@ class Util {
         guard let line = readLine() else {
             return []
         }
-        return line.components(separatedBy: " ")
+        return line.components(separatedBy: " ").filter { s in !s.isEmpty }
     }
 }

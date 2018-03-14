@@ -8,13 +8,14 @@
 
 import Foundation
 
+// läs en rad med bråk, skriv ut summan
+
 while true {
     let words = Util.readWords()
     if words.isEmpty {
         break
     }
     let rationals = words.map { word in Rational(string: word) }
-    print(rationals)
     let sum = rationals.reduce(Rational(0, 1), +)
-    print(sum)
+    print("\(rationals)   \(sum)")
 }

@@ -29,7 +29,7 @@ struct Rational {
     }
 
     private static func minimize(_ a: Int, _ b: Int) -> (Int, Int) {
-        let gcd = Util.gcd(a, b)
+        let gcd = Util.gcd(abs(a), b)
         return (a / gcd, b / gcd)
     }
 }
