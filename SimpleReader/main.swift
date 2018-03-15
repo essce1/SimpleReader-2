@@ -16,6 +16,7 @@ while true {
         break
     }
     let rationals = words.map { word in Rational(string: word) }
-    let sum = rationals.reduce(Rational(0, 1), +)
-    print("\(rationals)   \(sum)")
+    let sum = rationals.reduce(Rational(0), +)
+    let product = rationals.reduce(Rational(1), *)
+    print("\(rationals)   \(sum)  \(product)  \(Double(rational: sum))")
 }

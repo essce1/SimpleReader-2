@@ -17,15 +17,18 @@ struct Rational {
         (self.numerator, self.denominator) = Rational.minimize(numerator, denominator)
     }
 
+    init(_ int: Int) {
+        self.init(int, 1)
+    }
+
     init(string: String) {
         let split = string.components(separatedBy: "/")
-        assert(split.count == 2)
+        assert((1...2).contains(split.count) )
         let numerator = Int(split[0])
         assert(numerator != nil)
-        let denominator = Int(split[1])
+        let denominator = split.count == 2 ? Int(split[1]) : 1
         assert(denominator != nil)
-        assert(denominator! > 0)
-        (self.numerator, self.denominator) = Rational.minimize(numerator!, denominator!)
+        self.init(numerator!, denominator!)
     }
 
     private static func minimize(_ a: Int, _ b: Int) -> (Int, Int) {
@@ -46,10 +49,24 @@ extension Rational {
     static func - (a: Rational, b: Rational) -> Rational {
         return a + -b
     }
+
+    static func * (a: Rational, b: Rational) -> Rational {
+        return Rational(a.numerator * b.numerator, a.denominator * b.denominator)
+    }
+
+    static func / (a: Rational, b: Rational) -> Rational {
+        return Rational(a.numerator * b.denominator, a.denominator * b.numerator)
+    }
 }
 
 extension Rational: CustomStringConvertible {
     var description: String {
-        return "\(numerator)/\(denominator)"
+        return denominator > 1 ? "\(numerator)/\(denominator)" : "\(numerator)"
+    }
+}
+
+extension Double {
+    init(rational: Rational) {
+        self.init(Double(rational.numerator) / Double(rational.denominator))
     }
 }
