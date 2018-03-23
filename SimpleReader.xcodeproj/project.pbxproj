@@ -10,7 +10,7 @@
 		36B6D31920596BBF005A83AB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6D31820596BBF005A83AB /* main.swift */; };
 		36B6D32220596CE0005A83AB /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6D32120596CE0005A83AB /* Util.swift */; };
 		7E4E4B2C20631B27006558DD /* MixMax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E4B2B20631B27006558DD /* MixMax.swift */; };
-		7E4E4B2E2063209A006558DD /* Rational.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E4B2D2063209A006558DD /* Rational.swift */; };
+		7E8BD60D206555A100CE2AB0 /* Rational.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8BD60C206555A000CE2AB0 /* Rational.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,7 +30,7 @@
 		36B6D31820596BBF005A83AB /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		36B6D32120596CE0005A83AB /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		7E4E4B2B20631B27006558DD /* MixMax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixMax.swift; sourceTree = "<group>"; };
-		7E4E4B2D2063209A006558DD /* Rational.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Rational.swift; path = ../../SimpleDraw/SimpleDraw/Utils/Rational.swift; sourceTree = "<group>"; };
+		7E8BD60C206555A000CE2AB0 /* Rational.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Rational.swift; path = ../SimpleReader.xcodeproj/Rational.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 			children = (
 				36B6D31820596BBF005A83AB /* main.swift */,
 				7E4E4B2B20631B27006558DD /* MixMax.swift */,
-				7E4E4B2D2063209A006558DD /* Rational.swift */,
+				7E8BD60C206555A000CE2AB0 /* Rational.swift */,
 				36B6D32120596CE0005A83AB /* Util.swift */,
 			);
 			path = SimpleReader;
@@ -132,7 +132,7 @@
 				36B6D31920596BBF005A83AB /* main.swift in Sources */,
 				36B6D32220596CE0005A83AB /* Util.swift in Sources */,
 				7E4E4B2C20631B27006558DD /* MixMax.swift in Sources */,
-				7E4E4B2E2063209A006558DD /* Rational.swift in Sources */,
+				7E8BD60D206555A100CE2AB0 /* Rational.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
