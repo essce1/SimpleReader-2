@@ -50,4 +50,22 @@ class MixMax {
             }
         }
     }
+    static func select(_ name : String) -> (Rational) -> Rational {
+        switch (name) {
+        case "proportional" : return { c in Rational(1) }
+        case "constant" : return { c in Rational (1) / c }
+        default : return { c in Rational(1) }
+        }
+    }
+    static func weights(_ t : [Rational], _ w : [Rational], _ s : [Rational]) -> [Rational] {
+        var ai = -1, aleft = Rational(0)
+        return s.map ({ so in
+            if aleft == Rational(0) {
+                ai += 1
+                aleft = t[ai]
+            }
+            aleft = aleft - so
+            return w[ai]
+        })
+    }
 }
