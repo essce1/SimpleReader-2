@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		36B6D31920596BBF005A83AB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6D31820596BBF005A83AB /* main.swift */; };
-		36B6D32020596BD4005A83AB /* Rational.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6D31F20596BD4005A83AB /* Rational.swift */; };
 		36B6D32220596CE0005A83AB /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6D32120596CE0005A83AB /* Util.swift */; };
+		7E4E4B2C20631B27006558DD /* MixMax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E4B2B20631B27006558DD /* MixMax.swift */; };
+		7E4E4B2E2063209A006558DD /* Rational.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E4B2D2063209A006558DD /* Rational.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,8 +28,9 @@
 /* Begin PBXFileReference section */
 		36B6D31520596BBF005A83AB /* SimpleReader */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SimpleReader; sourceTree = BUILT_PRODUCTS_DIR; };
 		36B6D31820596BBF005A83AB /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		36B6D31F20596BD4005A83AB /* Rational.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rational.swift; sourceTree = "<group>"; };
 		36B6D32120596CE0005A83AB /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		7E4E4B2B20631B27006558DD /* MixMax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixMax.swift; sourceTree = "<group>"; };
+		7E4E4B2D2063209A006558DD /* Rational.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Rational.swift; path = ../../SimpleDraw/SimpleDraw/Utils/Rational.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				36B6D31820596BBF005A83AB /* main.swift */,
-				36B6D31F20596BD4005A83AB /* Rational.swift */,
+				7E4E4B2B20631B27006558DD /* MixMax.swift */,
+				7E4E4B2D2063209A006558DD /* Rational.swift */,
 				36B6D32120596CE0005A83AB /* Util.swift */,
 			);
 			path = SimpleReader;
@@ -128,7 +131,8 @@
 			files = (
 				36B6D31920596BBF005A83AB /* main.swift in Sources */,
 				36B6D32220596CE0005A83AB /* Util.swift in Sources */,
-				36B6D32020596BD4005A83AB /* Rational.swift in Sources */,
+				7E4E4B2C20631B27006558DD /* MixMax.swift in Sources */,
+				7E4E4B2E2063209A006558DD /* Rational.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,8 +248,9 @@
 		36B6D31D20596BBF005A83AB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 8WA57SDK22;
+				DEVELOPMENT_TEAM = KPJSBPZAMD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -255,8 +260,9 @@
 		36B6D31E20596BBF005A83AB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 8WA57SDK22;
+				DEVELOPMENT_TEAM = KPJSBPZAMD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;

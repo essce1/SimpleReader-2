@@ -9,7 +9,7 @@
 import Foundation
 
 // läs en rad med bråk, skriv ut summan
-
+/*
 while true {
     let words = Util.readWords()
     if words.isEmpty {
@@ -19,4 +19,14 @@ while true {
     let sum = rationals.reduce(Rational(0), +)
     let product = rationals.reduce(Rational(1), *)
     print("\(rationals)   \(sum)  \(product)  \(Double(rational: sum))")
+}*/
+
+func readRationals () -> [Rational] {
+    return Util.readWords().map { word in Rational(string: word) }
 }
+
+let a = readRationals ()
+let b = readRationals ()
+let c = MixMax.chop(a, b)
+print (c)
+

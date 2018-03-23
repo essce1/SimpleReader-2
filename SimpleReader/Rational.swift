@@ -25,8 +25,7 @@ struct Rational {
         let split = string.components(separatedBy: "/")
         assert((1...2).contains(split.count) )
         let numerator = Int(split[0])
-        assert(numerator != nil)
-        let denominator = split.count == 2 ? Int(split[1]) : 1
+        let denominator = split.count == 2 && numerator != 0 ? Int(split[1]) : 1
         assert(denominator != nil)
         self.init(numerator!, denominator!)
     }

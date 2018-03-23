@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:SimpleReader.xcodeproj">
+      location = "group:../../SimpleDraw/SimpleDraw/Utils/Rational.swift">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>
