@@ -25,10 +25,12 @@ func readRationals () -> [Rational] {
     return Util.readWords().map { word in Rational(string: word) }
 }
 
-/*let f = readLine()
-let a = readRationals ()
+let f = readLine()
+let at = readRationals(), aw = readRationals(), bt = readRationals()
+print(MixMax.iteration(MixMax.select(f!), (at, aw), bt))
 /*let b = readRationals ()
-let c = MixMax.chop(a, b)*/
-print (a.map(MixMax.select(f!)))*/
+let c = MixMax.chop(a, b)
+print (a.map(MixMax.select(f!)))
 let t = readRationals(), w = readRationals(), s = readRationals()
 print (MixMax.weights(t, w, s))
+ */

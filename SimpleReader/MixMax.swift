@@ -68,4 +68,16 @@ class MixMax {
             return w[ai]
         })
     }
+    static func removeDuplicates(_ t : [Rational], _ w : [Rational]) -> ([Rational], [Rational]) {
+        return (t, w)
+    }
+    static func iteration(_ f : (Rational) -> Rational, _ atw : ([Rational], [Rational]),
+                          _ bt : [Rational]) -> ([Rational], [Rational]) {
+        let (at, aw) = atw
+        let st = chop(at, bt)
+        let bw = bt.map(f)
+        let rwa = weights(at, aw, st), rwb = weights(bt, bw, st)    // r as in result
+        let rw = zip(rwa, rwb).map(max)
+        return removeDuplicates(st, rw)
+    }
 }
