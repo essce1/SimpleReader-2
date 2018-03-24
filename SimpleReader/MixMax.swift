@@ -78,6 +78,13 @@ class MixMax {
         let bw = bt.map(f)
         let rwa = weights(at, aw, st), rwb = weights(bt, bw, st)    // r as in result
         let rw = zip(rwa, rwb).map(max)
+        //print("iteration atw \(atw) bt \(bt) st \(st) rw \(rw)")
         return removeDuplicates(st, rw)
+    }
+    static func iterate(_ fName : String, _ ts : [[Rational]]) -> ([Rational], [Rational]) {
+        let f = select(fName)
+        let t = ts.first!.reduce(Rational(0), +)
+        let (st, rw) = ts.reduce(([t], [Rational(0)]), { r, e in return iteration(f, r, e) })
+        return (st, zip(st, rw).map(*))
     }
 }

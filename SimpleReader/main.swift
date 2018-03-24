@@ -26,9 +26,18 @@ func readRationals () -> [Rational] {
 }
 
 let f = readLine()
-let at = readRationals(), aw = readRationals(), bt = readRationals()
+var ts : [[Rational]] = []
+while true {
+    let words = Util.readWords()
+    if words.isEmpty {
+        break
+    }
+    ts.append(words.map { word in Rational(string: word) })
+}
+print(MixMax.iterate(f!, ts))
+/*let at = readRationals(), aw = readRationals(), bt = readRationals()
 print(MixMax.iteration(MixMax.select(f!), (at, aw), bt))
-/*let b = readRationals ()
+let b = readRationals ()
 let c = MixMax.chop(a, b)
 print (a.map(MixMax.select(f!)))
 let t = readRationals(), w = readRationals(), s = readRationals()
