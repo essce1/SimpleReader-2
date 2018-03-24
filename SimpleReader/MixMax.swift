@@ -79,14 +79,14 @@ class MixMax {
         return (st, rw)
     }
     static func applyOne(_ st : [Rational], _ sw : [Rational], _ at : [Rational]) -> [Rational] {           // a bit ugly
-        print("applyOne st \(st) sw \(sw) at \(at)")
+        //print("applyOne st \(st) sw \(sw) at \(at)")
         var aleft = at[0], ai = 0
         var aw : [Rational] = [], w = Rational(0)
         zip(st, sw).forEach({ sto, swo in
-            print ("sto \(sto) aleft \(aleft)")
+            //print ("sto \(sto) aleft \(aleft)")
             w = w + swo
             if aleft == sto {
-                print ("append \(w)")
+                //print ("append \(w)")
                 aw.append(w)
                 ai += 1
                 aleft = ai >= at.count ? Rational(-1) : at[ai] + sto
@@ -94,7 +94,7 @@ class MixMax {
             }
             aleft = aleft - sto
         })
-        print ("aw \(aw)")
+        //print ("aw \(aw)")
         return aw
     }
     static func apply(_ st : [Rational], _ sw : [Rational], _ ts : [[Rational]]) -> [[Rational]] {
