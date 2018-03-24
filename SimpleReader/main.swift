@@ -43,3 +43,9 @@ print (a.map(MixMax.select(f!)))
 let t = readRationals(), w = readRationals(), s = readRationals()
 print (MixMax.weights(t, w, s))
  */
+let st = readRationals(), sw = readRationals(), at = readRationals()
+//let st = [Rational(1, 3), Rational(1, 3), Rational(1, 3)]
+//let sw = [Rational(1), Rational(1, 2), Rational(1)]
+//let at = [Rational(1, 3), Rational(1, 3), Rational(1, 3)]
+print (MixMax.applyOne(st, sw, at))
+

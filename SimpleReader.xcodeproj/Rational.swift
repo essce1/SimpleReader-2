@@ -79,7 +79,7 @@ extension Float {
 
 extension Rational: Equatable {
     static func ==(lhs: Rational, rhs: Rational) -> Bool {
-        return rhs.numerator == rhs.numerator && lhs.denominator == rhs.denominator
+        return lhs.numerator == rhs.numerator && lhs.denominator == rhs.denominator
     }
     
 }
