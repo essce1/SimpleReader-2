@@ -122,7 +122,8 @@ class MixMax {
         var cold = old
         assert(olen >= start + length)
         func f (_ order : Int, tcount : Rational, dt : Rational) -> Rational {
-            return order == 0 ? (tcount == start ? w : Rational(0)) : Rational(1)
+            return order == 0 ? (tcount == start ? w / dt :
+                Rational(0)) : Rational(1)
         }
         let nt = [start, length, olen - length - start]
         cold.insert(nt, at: 0)
