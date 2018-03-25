@@ -34,7 +34,14 @@ while true {
     }
     ts.append(words.map { word in Rational(string: word) })
 }
-print(MixMax.iterate(f!, ts))
+if f == "widen" {
+    var tr = ts
+    tr.removeFirst()
+    print (tr)
+    print(MixMax.widen(ts[0][0], ts[0][1], ts[0][2], tr))
+} else {
+    print(MixMax.iterate(f!, ts))
+}
 /*let at = readRationals(), aw = readRationals(), bt = readRationals()
 print(MixMax.iteration(MixMax.select(f!), (at, aw), bt))
 let b = readRationals ()
